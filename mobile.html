@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-First Design Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px; /* Maximum width for mobile */
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column; /* Stack items vertically for mobile */
+        }
+
+        .item {
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row; /* Change to row for larger screens */
+                flex-wrap: wrap; /* Allow wrapping */
+            }
+
+            .item {
+                width: 45%; /* Two items per row on larger screens */
+                margin: 10px; /* Space around items */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mobile-First Design</h1>
+</header>
+
+<div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+</div>
+
+</body>
+</html>

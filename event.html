@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .button {
+            padding: 10px 15px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Event Handlers Example</h1>
+
+<button class="button" onclick="handleClick()">Click Me!</button>
+<button class="button" onmouseover="handleMouseOver()">Hover Over Me!</button>
+<input type="text" onkeyup="handleKeyUp()" onfocus="handleFocus()" onblur="handleBlur()" placeholder="Type something here...">
+
+<div id="output"></div>
+
+<script>
+    function handleClick() {
+        document.getElementById("output").innerText = "Button Clicked!";
+    }
+
+    function handleMouseOver() {
+        document.getElementById("output").innerText = "Mouse is Over the Button!";
+    }
+
+    function handleKeyUp() {
+        const inputText = event.target.value;
+        document.getElementById("output").innerText = "You typed: " + inputText;
+    }
+
+    function handleFocus() {
+        document.getElementById("output").innerText = "Input Field Focused!";
+    }
+
+    function handleBlur() {
+        document.getElementById("output").innerText = "Input Field Lost Focus!";
+    }
+</script>
+
+</body>
+</html>
